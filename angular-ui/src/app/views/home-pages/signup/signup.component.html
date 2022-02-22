@@ -1,0 +1,98 @@
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6  pt-5">
+          <div class="card mx-4">
+            <div class="card-body p-4 text-center">
+              <h1 class="text-center">
+                Stock Scanner
+              </h1>
+              <!-- <h3>Register</h3> -->
+              <p class="text-muted">Create your account</p>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    [ngClass]="{'text-danger': !userDetails?.firstName, 'text-primary': userDetails?.firstName}">
+                    <i class="fa fa-user"></i>
+                  </span>
+                </div>
+                <input class="form-control" [(ngModel)]="userDetails.firstName" name="firstName" type="text"
+                  placeholder="First Name">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    [ngClass]="{'text-danger': !userDetails?.lastName, 'text-primary': userDetails?.lastName}">
+                    <i class="fa fa-user"></i>
+                  </span>
+                </div>
+                <input class="form-control" [(ngModel)]="userDetails.lastName" name="lastName" type="text"
+                  placeholder="Last Name">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    [ngClass]="{'text-danger': !userDetails?.phoneNumber, 'text-primary': userDetails?.phoneNumber}">
+                    <i class="fa fa-phone"> </i>
+                  </span>
+                </div>
+                <input class="form-control" [(ngModel)]="userDetails.phoneNumber" name="phoneNumber" type="text"
+                  placeholder="phone Number">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    [ngClass]="{'text-danger': !userDetails?.email, 'text-primary': userDetails?.email}">@</span>
+                </div>
+                <input class="form-control" [(ngModel)]="userDetails.email" name="email" type="text" placeholder="Email"
+                  (ngModelChange)="checkEmailAlreadyExists(userDetails.email)">
+              </div>
+              <p class="alert alert-danger validation-font-size  text-left" role="alert" *ngIf="alreadyEmailValidation">
+                This Email Already Exists, please try another one.
+              </p>
+              <p class="alert alert-danger validation-font-size  text-left" role="alert" *ngIf="!validEmail">
+                Your email address is invalid. Please enter a valid address.
+              </p>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    [ngClass]="{'text-danger': !userDetails?.password, 'text-primary': userDetails?.password}">
+                    <i class="fa fa-lock"></i>
+                  </span>
+                </div>
+                <input class="form-control" [(ngModel)]="userDetails.password" name="password" type="password"
+                  placeholder="Password">
+              </div>
+              <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    [ngClass]="{'text-danger': !userDetails?.confNewPassword, 'text-primary': userDetails?.confNewPassword}">
+                    <i class="fa fa-lock"></i>
+                  </span>
+                </div>
+                <input class="form-control" [(ngModel)]="userDetails.confNewPassword" name="confNewPassword"
+                  type="password" placeholder="Repeat password">
+              </div>
+              <p class="alert alert-danger validation-font-size  text-left" role="alert"
+                *ngIf="userDetails.password &&  userDetails.confNewPassword && userDetails.password !=  userDetails.confNewPassword">
+                The password and confirmation password do not match !
+              </p>
+              <app-alert></app-alert>
+              <button class="btn ripple btn-primary btn-block" (click)="doSignup()" type="button">Create Account</button>
+              <br>
+              <div class="text-center signup-div">
+                <div><span>OR</span></div>
+                <p class="text-primary mt-20 ">Already have an account!</p>
+
+                  <a href="javascript:void(0)" [routerLink]="['/login']"
+                    class="btn btn-default w-100 px-4 btn-gray btn-square mt-20">Login </a>
+              </div>
+              <!-- <pre [innerHtml]="userDetails | json"> </pre> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

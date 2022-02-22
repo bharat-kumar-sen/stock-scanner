@@ -1,0 +1,4 @@
+<div *ngFor="let alert of alerts" class="{{ cssClass(alert) }} alert-dismissable">
+    <span style="color: #eb6f33;">{{alert.message}}</span>
+    <a class="close custom-cursor-pointer" (click)="removeAlert(alert)">&times;</a>
+</div>

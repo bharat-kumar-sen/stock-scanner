@@ -1,0 +1,35 @@
+<app-header [navbarBrandRouterLink]="['/dashboard']" [fixed]="true"
+  [navbarBrandFull]="{src: 'assets/dist/img/brand/logo.png',width: 150, alt: 'STOCK-SCANNER'}"
+  [navbarBrandMinimized]="{src: 'assets/dist/img/brand/logo.png', width: 150, alt: 'STOCK-SCANNER'}"
+  [sidebarToggler]="'lg'" [mobileAsideMenuToggler]="false" [asideMenuToggler]=false>
+  <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item dropdown" dropdown placement="bottom right">
+      <a class="nav-link text-primary text-capitalize" data-toggle="dropdown" href="#" role="button"
+        aria-haspopup="true" aria-expanded="false" dropdownToggle (click)="false">
+        <img [src]="'assets/dist/img/brand/avatar.png'" class="img-avatar" />
+        {{currentUser.firstName}}
+        <i class="fa fa-angle-down"> </i> &nbsp;&nbsp;
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="simple-dropdown">
+        <!-- <a class="dropdown-item p-3 pl-4 pt-3" [routerLink]="['/profile-settings']"><i
+            class="text-primary  fa fa-gear"></i> Profile Settings</a>
+        <hr class="m-0"> -->
+        <a class="dropdown-item p-3 pl-4" href="#" (click)="logout()"><i class="text-primary fa fa-sign-out"></i>
+          Logout</a>
+      </div>
+    </li>
+  </ul>
+</app-header>
+<div class="app-body" id="admin-container">
+  <app-sidebar [fixed]="true" admin>
+    <app-sidebar-nav [navItems]="navItems" [perfectScrollbar]></app-sidebar-nav>
+  </app-sidebar>
+  <main class="main row">
+    <div class="container-fluid p-4">
+      <app-loading></app-loading>
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
+<app-footer>
+</app-footer>

@@ -1,0 +1,421 @@
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles
+@import "~@coreui/coreui/scss/coreui";
+
+// If you want to add something do it here
+@import "custom";
+
+@import '~ngx-toastr/toastr.css';
+
+main {
+  min-height: 650px;
+  background: #EEEEEE;
+}
+
+.container {
+  min-height: 650px !important;
+  background: #EEEEEE !important;
+}
+
+.app-header .navbar-brand {
+  height: auto;
+}
+
+.d-md-block {
+  display: none !important;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+// .sidebar .nav-link:hover i {
+//   color: #8A80FB !important;
+// }
+html:not([dir=rtl]) .sidebar {
+  margin-left: -600px;
+  max-width: 200px;
+  padding-top: 0;
+  top: 55px;
+}
+
+.sidebar .nav {
+  width: 100%;
+}
+
+.sidebar .nav-link.active {
+  color: white !important;
+  background: #334151;
+}
+
+.sidebar .nav-link:hover {
+  color: white !important;
+  background: #334151;
+}
+
+.sidebar .nav-link {
+  color: #334151 !important;
+}
+
+.sidebar .nav-link.active .nav-icon {
+  color: white;
+}
+
+.sidebar .nav-dropdown.open {
+  background: #8a80fb26;
+}
+
+body.sidebar-show {
+  overflow: hidden;
+}
+
+.sidebar .nav-dropdown .nav-dropdown-items app-sidebar-nav-link a {
+  padding-left: 30px;
+  // background-color: #f5f5f5 ;
+}
+
+@media(max-width:991px) {
+  .app-header .navbar-brand {
+    position: absolute;
+    left: 75px;
+    top: 12px;
+    width: auto;
+    margin: 0;
+  }
+}
+
+table.dataTable tbody th,
+table.dataTable tbody td {
+  padding: 8px 10px !important;
+}
+
+.border-b {
+  border-bottom: 1px solid #8a80fb1a;
+}
+
+.nowrap {
+  white-space: nowrap !important;
+}
+
+.alert {
+  padding: 6px 15px !important;
+}
+
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* start Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 4px 10px;
+  transition: 0.3s;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  text-transform: uppercase !important;
+  // border-bottom: 1px solid #ccc;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #4285f4;
+  color: white;
+  ;
+}
+
+/* Style the tab content */
+.tabcontent {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  min-height: 450px !important;
+}
+
+/* close Style the tab */
+
+.multiselect-dropdown.selected-item {
+  border: 1px solid #8A80FB !important;
+  background: #8A80FB !important;
+}
+
+.position-loading {
+  position: absolute;
+  z-index: 9999;
+  bottom: 285px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+
+.list-unstyled {
+  // padding: 30px !important;
+  padding: 0px !important;
+  font-size: 12px !important;
+  list-style: none;
+}
+
+.imgPreview {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imgPreview.formImg li {
+  // flex: 0 0 18.33%;
+
+  position: relative;
+  padding: 5px !important;
+  // flex: 10% 0% 10%;
+  text-align: center;
+  width: 14%;
+
+  .innerDiv {
+    background-color: #F1F1F1;
+    transition: all 0.4s ease 0s;
+    /*  &:hover{
+      transform: scale(1.05);
+      border: 1px #334151;
+      cursor: pointer !important;
+    } */
+  }
+
+  span {
+    position: absolute;
+    right: -5px;
+    line-height: 13px;
+    top: -8px;
+    // line-height: normal;
+    cursor: pointer;
+    background: #f86c6b !important;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    box-shadow: 0px 0px 3px 0px #000;
+    text-align: center;
+
+    i {
+      font-size: 11px;
+      color: #fff;
+      font-weight: normal;
+    }
+  }
+}
+
+#search_location_map {
+  height: 400px;
+}
+
+.btn-default,
+.btn-default.focus,
+.btn-default:focus {
+  color: #404040 !important;
+  border-color: #dedede !important;
+  background-color: #fff !important;
+}
+
+.custom-cursor-pointer {
+  cursor: pointer !important;
+}
+
+.pt-10 {
+  padding-top: 15%;
+}
+
+.checked[_ngcontent-jum-c6] {
+  background: #4285f4 !important;
+  border-color: #4285f4 !important;
+}
+
+
+.app-images-preview {
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff0;
+    background-clip: padding-box;
+    border: none;
+    border-radius: none;
+    outline: none;
+  }
+}
+
+.text-rating {
+  color: #EB6E00 !important;
+  font-size: 50px !important;
+  line-height: 50px !important;
+}
+
+.section-review {
+  font-size: 16px;
+  color: grey;
+}
+
+.border-top {
+  border-top: 1px gray solid;
+}
+
+.switch>.switch-text>.on {
+  top: 20% !important;
+  left: 12% !important;
+}
+
+.switch>.switch-text>.off {
+  right: 7% !important;
+  top: 20% !important;
+}
+
+.switch-medium.switch-labeled {
+  width: 61px !important;
+}
+
+.dropdown-list {
+  // position: unset !important;
+  margin-top: 0px !important;
+}
+
+.theme-green .bs-datepicker-head {
+  background-color: #4285f4;
+}
+
+.theme-green .bs-datepicker-body table td span.selected,
+.theme-green .bs-datepicker-body table td.selected span,
+.theme-green .bs-datepicker-body table td span[class*="select-"]:after,
+.theme-green .bs-datepicker-body table td[class*="select-"] span:after {
+  background-color: #4285f4;
+}
+
+.selected-chart {
+  border: 3px solid #4285f4 !important;
+}
+
+.sidebar .nav-dropdown>.nav-dropdown-items i {
+  margin-left: 10px;
+}
+
+.cls-display-none {
+  display: none !important;
+}
+
+.toast-bottom-right {
+  right: 16px !important;
+  bottom: 12px !important;
+}
+
+.app-header .nav-item .nav-link>.img-avatar,
+.app-header .nav-item .avatar.nav-link>img {
+  margin: -6px 10px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  margin-bottom: 10px !important;
+}
+
+table.dataTable td.dataTables_empty {
+  padding: 20px !important;
+  font-weight: bold !important;
+}
+
+.loading-text {
+  font-size: 13px !important;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc {
+  padding-right: 20px !important;
+  vertical-align: top !important;
+  font-size: 10px !important;
+}
+
+.font9px {
+  font-size: 9px !important;
+}
+
+.signup-div div {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    &:before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: #000;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 2;
+    }
+    span {
+      background: #fff;
+      position: relative;
+      z-index: 9;
+      padding: 5px;
+    }
+}
+
+
+.custom-checkbox {
+  display: block;
+  margin-bottom: 15px;
+  input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+  label {
+    position: relative;
+    cursor: pointer;
+    &:before {
+      content:'';
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 2px solid #0079bf;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+      padding: 10px;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+  }
+}
+
+
+.custom-checkbox input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #0079bf;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

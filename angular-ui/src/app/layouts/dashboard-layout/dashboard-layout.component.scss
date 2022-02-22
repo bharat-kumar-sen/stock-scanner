@@ -1,0 +1,22 @@
+@media (min-width:991.5px) {
+  .main-header.side-header {
+    position: fixed;
+    right: 0;
+    z-index: 10 !important;
+    border-bottom: 1px solid #e1e6f1;
+    box-shadow: none;
+    top: 0;
+    width: calc(100% - 240px);
+    transition: all 0.3s ease 0s;
+  }
+
+  .main-sidebar-hide .main-header.side-header {
+    width: calc(100% - 100px);
+    transition: all 0.3s ease 0s;
+  }
+
+}
+
+.sidebar>.sidebar-nav {
+  background: #fff;
+}

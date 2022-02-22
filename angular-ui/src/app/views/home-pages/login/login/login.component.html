@@ -1,0 +1,52 @@
+<div class="col-md-4 d-block mx-auto pt-5">
+  <div class="card custom-card mt-5">
+    <h3 class="text-center p-2 pt-4">
+      Stock Scanner
+    </h3>
+    <div class="card-body text-center pt-1">
+      <form>
+        <div class="form-group text-left">
+          <label> Email ID
+            <sup> <i class="fa fa-star star-icon" aria-hidden="true"
+                [ngClass]="{'text-secondary': !loginInfo?.email, 'text-primary': loginInfo?.email}"></i>
+            </sup>
+          </label>
+          <input type="email" id="email" name="email" [(ngModel)]="loginInfo.email" class="form-control"
+            placeholder="Please enter email">
+        </div>
+        <div class="form-group text-left">
+          <label> Password
+            <sup> <i class="fa fa-star star-icon" aria-hidden="true"
+                [ngClass]="{'text-secondary': !loginInfo?.password, 'text-primary': loginInfo?.password}"></i>
+            </sup>
+          </label>
+          <input type="password" id="password" name="password" [(ngModel)]="loginInfo.password" class="form-control"
+            placeholder="Please enter password">
+        </div>
+        <div class="form-group custom-checkbox">
+          <div class="float-left">
+            <input type="checkbox" [(ngModel)]="loginInfo.remember" id="remember" name="remember" value="1">
+            <label for="remember">&nbsp; Remember Me</label>
+          </div>
+          <!-- <a class="float-right custom-cursor-pointer" routerLink="/forgot-password">Forgot password?</a> -->
+        </div>
+        <div class="pt-5">
+          <button class="btn ripple btn-primary btn-block" (click)="doSignin(loginMode.LOGIN)">SIGN IN</button>
+          <br>
+          <div class="text-center signup-div">
+            <div><span>OR</span></div>
+            <a href="javascript:void(0)" [routerLink]="['/signup']" class="btn btn-default w-100 px-4 btn-gray btn-square mt-20">Signup </a>
+            <!-- <a href="javascript:void(0)" [routerLink]="['/signup']" class="text-primary pull-left mt-20 ">Signup </a> -->
+            <!-- <a href="javascript:void(0)" [routerLink]="['/forgot-password']"
+              class="text-primary pull-right mt-20 ">Forgot
+              password </a> -->
+          </div>
+          <!-- <button (click)="socialSignIn('google')" [ngStyle]="{'font-weight': 'bold'}" type="button"
+            class="btn btn-primary btn-block">
+            CONTINUE WITH GOOGLE
+          </button> -->
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

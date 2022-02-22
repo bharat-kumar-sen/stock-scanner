@@ -64,7 +64,7 @@ exports.getCryptoCoinByID = (callback) => {
                             if (response.status === 200) {
                               let symbolMarketDetails = null;
                               symbolMarketDetails = response.data;
-                              console.log("symbolMarketDetails===", symbolMarketDetails);
+                              // console.log("symbolMarketDetails===", symbolMarketDetails);
                               let noOfDays = process.env.NO_OF_DAYS;
                               let total_volumes =
                                 symbolMarketDetails.total_volumes;
@@ -367,10 +367,9 @@ exports.stockCronJob = () => {
   });
   cronjob.start();
   console.log(cronjob.running);
-  console.log("test================")
-  exports.getCryptoCoinByID(() => {
-    console.log("cron job has been run successfully.");
-  })
+  /*  exports.getCryptoCoinByID(() => {
+     console.log("cron job has been run successfully.");
+   }) */
   /* exports.getEleminateCoin(() => {
      console.log("started coin elemination.");
    }); */
